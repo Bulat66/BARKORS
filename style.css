@@ -85,13 +85,30 @@ header .container .text-box{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 2rem;
 }
-.type-a .box{
-	width: 350px;
-	height: 300px;
+.type-a .wrapper{
+	margin-top: 30px;
+	width: 100%;
+	max-width: 100px;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	border-radius: 30px;
+	background: url('img/sand-2.jpg');
+}
+.type-a  .box{
+	width: 320px;
+	padding: 20px;
+	margin: 20px;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(128, 128, 128, 0.7);
+}
+.type-a .wrapper .left{
+	
 }
 .type-b{
 	height: auto;
@@ -161,8 +178,20 @@ header .container .text-box{
 .type-c .box img{
 	width: 10rem;
 }
+.type-d{
+	padding: 10px;
+}
+.type-e{
+	padding: 10px;
+}
 .team{
 	margin: 50px auto;
+}
+.team h3{
+	text-align: center;
+}
+.team .hero .wrapper h3{
+	text-align: left;
 }
 .team .hero img{
 	aspect-ratio: 1;
@@ -246,6 +275,7 @@ footer .container .box .flex .wrapper img{
 	}
 @media (max-width: 1024px){
 	.container{
+				width: 100%;
 		max-width: 824px;
 	}
 	header .container .logo-box img{
@@ -265,6 +295,7 @@ header .container .text-box{
 }
 @media (max-width: 992px){
 	.container{
+		width: 100%;
 		max-width: 792px;
 	}
 	.type-b{
@@ -286,11 +317,18 @@ header .container .text-box{
 }
 @media (max-width: 768px){
 	.container{
+		width: 100%;
 		max-width: 568px;
 	}
 	table, ul, .text{
 		max-width: 300px;
 		font-size: 1rem;
+	}
+	.type-a .wrapper{
+		gap: 1rem;
+	}
+	.type-a .wrapper .text{
+		font-size: .9rem;
 	}
 	.type-b{
 		height: auto;
@@ -324,6 +362,7 @@ header .container .text-box{
 }
 @media (max-width: 567px){
 	table{
+		width: 100%;
 		text-align: left;
 		font-size: .8rem;
 	}
@@ -331,7 +370,6 @@ header .container .text-box{
 		display: none;
 	}
 	.container{
-		max-width: 367px;
 		margin: 30px auto;
 	}
 	header .container{
