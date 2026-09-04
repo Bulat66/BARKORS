@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>БАРКОРС</title>
+	<link rel="stylesheet" href="style.css" type='text/css'>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+<header>
+	<div class="container">
+		<div class="logo-box">
+			<img id='logo' src="img/БАШКОРС_лого_F.svg" alt="">
+			<h3>БАШКОРС</h3>
+		</div>
+		<div class="text-box text">
+			Компания призвана решить одну из серьезнейших экологических и экономических задач Российской Федерации - реализацию послеспиртовой барды
+		</div>
+	</div>
+</header>
+<main>
+	<div class="container type-a">
+		<div class="left box text">
+			Ежегодно на одном заводе производится до 200 000 кубических метров послеспиртовой барды. Ее сушка и вывоз тратит до 40% себестоимости продукции, а скармливание жидкой барды в чистом виде имеет нестабильный состав, быстро портится и имеет риск ацидоза у животных
+	</div>
+		<div class="right box text">
+			Традиционные комбикорма использовать невыгодно, из за растущих цен на зерно. Импортируемые белковые добавки дорогостоящие
+		</div>
+	</div>
+	<div class="container type-b">
+		<div class="left-box">
+			<canvas id="three-canvas"></canvas>
+		</div>
+		<div class="right-box">
+			<div class="slide text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.
+			</div>
+			<div class="slide text">
+				<ul>
+					<li><h3>СОСТАВ</h3></li>
+					<li>Жом свекловичный 34%</li>
+					<li>Жмых подсолнечника 24%</li>
+					<li>Барда сухая послеспиртовая 20%</li>
+					<li>Барда жидкая послеспиртовая 14%</li>
+					<li>Костра льна 5%</li>
+					<li>Пробиотик Propionibacterium freudenreichii (не менее 106 КОЕ/Г)3%</li>
+				</ul>
+			</div>
+			<div class="slide text">
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. 
+			</div>
+		</div>
+	</div>
+	<!-- <div class="type-c">
+		<div class="type-c-inner">
+			<div class="box">
+				<img src="img/Bull_6.svg" alt="#">
+				<h3>ПОЛНОРАЦИОННЫЙ</h3>
+			</div>
+			<div class="box">
+				<img src="img/herd_4.svg" alt="#">
+				<h3>ДЛЯ ВСЕХ ПОЛОВОЗРАСТНЫХ ГРУПП</h3>
+			</div>
+			<div class="box">
+				<img src="img/plant.svg" alt="">
+				<h3>БЕЗ ГМО</h3>
+			</div>
+		</div>
+	</div>
+	<div class="container type-d">
+		<ul>
+			<li><h3>СОСТАВ И ФУНКЦИЯ КОМПОНЕНТОВ</h3></li>
+			<li>Барда жидкая (послеспиртовая) - Обеспечивает оптимальную влажность (62-65%) и распределение пробиотика</li>
+			<li>Барда сухая (послеспиртовая) - Источник остаточных сахаров и витаминов группы B</li>
+			<li>Жом свекловичный - Источник пектина и легкоферментируемой клетчатки; обеспечивает буферность рубцовой среды</li>
+			<li>Жмых подсолнечника - Источник сырого протеина (15-18%) и серусодержащих аминокислот</li>
+			<li>Костра льна -  Структурирующий агент; предотвращает слёживание; связывает свободную влагу</li>
+			<li>Пробиотик Propionibacterium freudenreichii - Стабилизация pH (4,8-5,2); подавление патогенной микрофлоры; продукция пропионовой кислоты и витамина B₁₂</li>
+		</ul>
+	</div>
+	<div class="container type-e">
+		<h3>АНАЛИЗ ПИТАТЕЛЬНОЙ ЦЕННОСТИ ГОТОРОЙ ФОРМЫ КОМБИКОРМА</h3>
+		<table>
+        <thead>
+            <tr>
+                <th>НАИМЕНОВАНИЕИ ПОКАЗАТЕЛЯ</th>
+                <th>РЕЗУЛЬТАТ ИСПЫТАНИЙ</th>
+                <th>НД НА МЕТОД ИСПЫТАНИЙ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Массовая доля влаги</td>
+                <td>7.7%</td>
+                <td>ГОСТ Р 57059-2016<span> - Корма, комбикорма, комбикормовое сырье. Экспресс-метод определения влаги</span>, п.11</td>
+            </tr>
+            <tr>
+                <td>Массовая доля сырого жира</td>
+                <td>8,6±0,8%</td>
+                <td>ГОСТ 13496.15-2016<span> - Корма, комбикормовое сырье. Методы определения массовой доли сырого жира</span>, п.9.1</td>
+            </tr>
+            <tr>
+                <td>Массовая доля сырого протеина</td>
+                <td>15,0±0,5%</td>
+                <td>ГОСТ 13496.4-2019<span> - Корма, комбикормовое сырье. Методы определения содержания азота и сырого протеина</span>, п.8</td>
+            </tr>
+            <tr>
+                <td>Массовая доля сырой клетчатки</td>
+                <td>2,9±1,0%</td>
+                <td>ГОСТ 31675-2012<span> - Корма. Методы определения содержания сырой клетчатки с применением промежуточной фильтрации</span>, п.6</td>
+            </tr>
+            <tr>
+                <td>Содержание обменной энергии</td>
+                <td>Более 10,0 МГДж/кг</td>
+                <td>Методические указания по оценке качества и питательности кормов<span>(утв. Минсельхозом России от 20.06.2002)</span></td>
+            </tr>
+        </tbody>
+  		</table>
+    </div> -->
+</main>
+<footer>
+	<div class="container">
+		<ul>
+			<li>Контактная информация:</li>
+			<li>ООО «БарКорс» ОГРН: 1258600011427</li>
+			<li>Телефон: 89173437458</li>
+			<li>Email: gaffarova2002@list.ru</li>
+			<li>www.barkors.ru</li>
+		</ul>
+		<div class="box">
+			<h3>НАШИ ПАРТНЕРЫ</h3>
+			<div class="flex">
+				<div class='wrapper'><img src="img/bashspirt.png" alt=""></div>
+				<div class="wrapper"><img src="img/FASIE.SVG" alt=""></div>
+				<div class="wrapper"><img src="img/uunit.svg" alt=""></div>
+			</div>
+		</div>
+	</div>
+</footer>
+<script src='script.js'></script>
+</body>
+</html>
