@@ -355,6 +355,7 @@ header .flex{
 	gap: 30px;
 }
 .type-d .wrapper .box{
+	position: relative;
 	max-width: 280px;
 	overflow: hidden;
 	border-radius: 12px;
@@ -362,10 +363,18 @@ header .flex{
 	flex-direction: column;
 	transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1),
               box-shadow 0.35s ease;
-
-  /* Чтобы transform работал корректно */
   transform-origin: center;
   will-change: transform;
+  
+}
+.type-d .wrapper .box::before{
+	content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('img/840449_file.svg');
+  background-size: cover;
+  filter: sepia(1) saturate(1.4) hue-rotate(-8deg) brightness(0.7) contrast(1.08);
+  z-index: -1;
 }
 .type-d .wrapper .box:hover{
 	transform: scale(1.05);
@@ -373,12 +382,11 @@ header .flex{
   box-shadow: 0 18px 40px rgba(191, 149, 63, 0.6);
 }
 .type-d .wrapper .box .icon, .type-d .box .title{
-	margin-bottom: 6px;
+	border-bottom: 6px solid black;
 }
 .type-d .wrapper .box > *{
 	flex-grow: 1;
 	padding: 20px;
-	background: #b49559;
 }
 .type-d .wrapper .box .icon{
 	display: flex;
@@ -386,7 +394,7 @@ header .flex{
 	justify-content: center;
 }
 .type-d .wrapper .box .icon img{
-	width: 80px;
+	height: 60px;
 }
 .type-d .wrapper .box .title h3{
 	text-align: center;
@@ -394,6 +402,12 @@ header .flex{
 }
 .type-e{
 	padding: 10px;
+}
+.type-e h3{
+	text-align: center;
+}
+.type-e table{
+	margin: 0 auto;
 }
 tr td:nth-child(2){
 	text-align: center;
