@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="24" viewBox="0 0 48 24">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="24" y1="21" x2="24" y2="3" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b4843d"/>
+      <stop offset="0.591" stop-color="#f4e999"/>
+      <stop offset="1" stop-color="#b49559"/>
+    </linearGradient>
+  </defs>
+  <path id="Прямоугольник_скругл._углы_2" data-name="Прямоугольник, скругл. углы 2" class="cls-1" d="M8,9H36.132C36.781,9,42.527,5.342,34,3c11.358-.43,6,6,6,6a6,6,0,0,1,0,12H8A6,6,0,0,1,8,9Z"/>
+  <path id="Прямоугольник_скругл._углы_2-2" data-name="Прямоугольник, скругл. углы 2" class="cls-2" d="M26,18c0,3.314-5.686,3-9,3H8c5.638-2.717-6.16-5.63,4-6,2.464-.09,1.849,2.412,5,1,5.2-4.859.506,1.989,4,0C26.477,12.881,26,17.48,26,18Z"/>
+  <path id="Прямоугольник_скругл._углы_2-3" data-name="Прямоугольник, скругл. углы 2" class="cls-2" d="M24,9H40c3.314,0,2.032-.149,1,3-1.773,5.407-2.62-2.5-4.309-1.6C33.445,12.135,31.3,15.388,29,13,27.337,11.271,20.686,9,24,9Z"/>
+</svg>

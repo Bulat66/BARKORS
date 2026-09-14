@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b4843d;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2, .cls-4 {
+        fill: #dac57a;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        fill: #8c5f48;
+        filter: url(#filter-2);
+      }
+
+      .cls-4 {
+        filter: url(#filter-3);
+      }
+
+      .cls-5, .cls-6 {
+        fill: #f4e999;
+      }
+
+      .cls-5 {
+        filter: url(#filter-4);
+      }
+
+      .cls-6 {
+        filter: url(#filter-5);
+      }
+    </style>
+    <filter id="filter" x="-5" y="-5" width="58" height="24" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="-6" y="11" width="59" height="25" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="-5" y="27" width="58" height="26" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="-5" y="32" width="58" height="21" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="-5" y="36" width="58" height="17" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="Прямоугольник_1" data-name="Прямоугольник 1" class="cls-1" d="M0,0H48V48H0V0H0Z"/>
+  <path id="Фигура_1" data-name="Фигура 1" class="cls-2" d="M0,0H48V11s-6.469,7.467-26-2C6.387,1.432,0,8,0,8V0Z"/>
+  <path id="Фигура_2" data-name="Фигура 2" class="cls-3" d="M0,16s0.54,7.962,16.249,1.693C28.262,13.418,48,21,48,21v7s-7.971,4.988-28.516,0C-2.556,22.689,0,28,0,28V16Z"/>
+  <path id="Фигура_3" data-name="Фигура 3" class="cls-4" d="M0,32V48H48V38a61.991,61.991,0,0,0-22.337-2.792C9.556,36.539,0,32,0,32Z"/>
+  <path id="Фигура_4" data-name="Фигура 4" class="cls-5" d="M0,48V37s8.834,2.621,17,2c14.406-1.1,31,2,31,2v7H0Z"/>
+  <path id="Фигура_5" data-name="Фигура 5" class="cls-6" d="M0,48V43s8.867,5.053,17.506,1.094C30.882,37.964,48,46,48,46v2H0Z"/>
+</svg>

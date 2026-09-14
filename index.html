@@ -8,10 +8,11 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
 </head>
 <body>
 <header>
-	<div class="container">
+	<div class="container flex">
 		<div class="logo-box">
 			<img id='logo' src="img/БАШКОРС_лого_F.svg" alt="">
 			<h3>БАРКОРС</h3>
@@ -23,14 +24,12 @@
 </header>
 <main>
 	<div class="container type-a">
-		<!-- <div class="wrapper"> -->
 			<div class="left box text">
 			Ежегодно на одном заводе производится до 200 000 кубических метров послеспиртовой барды. Ее сушка и вывоз тратит до 40% себестоимости продукции, а скармливание жидкой барды в чистом виде имеет нестабильный состав, быстро портится и имеет риск ацидоза у животных
 			</div>
 			<div class="right box text">
 			Традиционные комбикорма использовать невыгодно, из за растущих цен на зерно. Импортируемые белковые добавки дорогостоящие
-		</div>
-		<!-- </div> -->
+			</div>
 	</div>
 	<div class="container type-b">
 		<div class="left-box">
@@ -51,7 +50,7 @@
 					<li>Метионин + цистин 0.4%</li>
 					<li>Кальций(Ca) 0.8%</li>
 					<li>Фосфор(P) 0.5%</li>
-					<li>Propionibacterium freudenreichii =>106КОЕ/г</li>
+					<li>Propionibacterium freudenreichii =>10<sup>6</sup>КОЕ/г</li>
 				</ul>
 			</div>
 			<div class="slide text">
@@ -62,7 +61,7 @@
 					<li>Барда сухая послеспиртовая 20%</li>
 					<li>Барда жидкая послеспиртовая 14%</li>
 					<li>Костра льна 5%</li>
-					<li>Пробиотик Propionibacterium freudenreichii (не менее 106 КОЕ/Г) 3%</li>
+					<li>Пробиотик Propionibacterium freudenreichii (не менее 10<sup>6</sup> КОЕ/Г) 3%</li>
 				</ul>
 			</div>
 			<div class="slide text">
@@ -70,7 +69,7 @@
 					<li><h3>НОРМЫ СКАРМЛИВАНИЯ (кг на голову в сутки)</h3></li>
 					<li>ЖМолодняк (6 - 12 месяцев) 1.5 -2.0 кг</li>
 					<li>Молодняк (12 - 18 месяцев) 2.0 - 2.5 кг</li>
-					<li>Взрослые на откорме ()2.5 - 3.5 кг</li>
+					<li>Взрослые на откорме 2.5 - 3.5 кг</li>
 					<li>Сухостойные коровы 2.0 - 3.0 кг</li>
 					<li>Лактирующие коровы 3.0 - 4.0 кг</li>
 					<li>Быки-производители2.5 - 3.5 кг</li>
@@ -95,49 +94,111 @@
 		</div>
 	</div>
 	<div class="container team">
-		<h3>НАША КОМАНДА</h3>
+		<h3 class='custom-underline'>НАША КОМАНДА</h3>
 		<div class="hero">
-			<img src="img/human.png" alt="">
+			<div class="bc-img face" id='Gaffarova'></div>
 			<div class="wrapper">
 				<h3>Гаффарова Эльвина Рамилевна</h3>
 				<p>Стратегическое планирование, координация работы команды, взаимодействие с партнерами и инвесторами, принятие управленческих решений, контроль за исполнением календарного плана</p>
 			</div>
 		</div>
 		<div class="hero">
-			<img src="img/human.png" alt="">
+			<div class="bc-img face" id='Farchutdinov'></div>
 			<div class="wrapper">
 				<h3>Фархутдинов Рашит Габдулхаевич</h3>
 				<p>Осуществление общего научного руководства, контроль качества продукции на соответствие техническим условиям, разработка рекомендаций по совершенствованию технологии</p>
 			</div>
 		</div>
 		<div class="hero">
-			<img src="img/human.png" alt="">
+			<div class="bc-img face" id='Grigoriadi'></div>
 			<div class="wrapper">
 				<h3>Григориади Анна Сергеевна</h3>
 				<p>Консультант, контроль качества продукции на соответствие микробиологическим требованиям</p>
 			</div>
 		</div>
 		<div class="hero">
-			<img src="img/human.png" alt="">
-			<div class="wrapper">
+			<div class="bc-img face" id='Chervo'></div>
+				<div class="wrapper">
 				<h3>Черво Алексей Юрьевич</h3>
 				<p>Обеспечение бесперебойной работы технологического оборудования, контроль технологических параметров процесса гранулирования</p>
 			</div>
 		</div>
 	</div>
+	<div class="container partners">
+		<h3 class='custom-underline'>НАШИ ПАРТНЕРЫ</h3>
+		<div class="flex">
+			<div class="organisation golden-card" id='Bashspirt'>
+				<div class="wrapper">
+					<img src="img/logo_Bashspirt.png" alt="#">
+				</div>
+				<a href="https://bashspirt.ru/"><div class="button">сайт</div></a>
+			</div>
+			<div class="organisation golden-card" id='Fasie'>
+				<div class="wrapper">
+					<img src="img/logo_Fasie.svg" alt="#">
+				</div>
+				<a href="https://fasie.ru/"><div class="button">сайт</div></a>
+			</div>
+			<div class="organisation golden-card" id='Uunit'>
+				<div class="wrapper">
+					<img src="img/logo_uunit.svg" alt="#">
+				</div>
+				<a href="https://uust.ru/"><div class="button">сайт</div></a>
+			</div>
+			<div class="organisation golden-card" id='Bashincom'>
+				<div class="wrapper">
+					<img src="img/logo_Bashincom.png" alt="#">
+				</div>
+				<a href="https://www.bashinkom.ru/"><div class="button">сайт</div></a>
+			</div>
+		</div>
+	</div>
 	<div class="container type-d">
-		<ul>
-			<li><h3>СОСТАВ И ФУНКЦИЯ КОМПОНЕНТОВ</h3></li>
+		<!-- <ul>
+			<li><h3 class='custom-underline'>СОСТАВ И ФУНКЦИЯ КОМПОНЕНТОВ</h3></li>
 			<li>Барда жидкая (послеспиртовая) - Обеспечивает оптимальную влажность (62-65%) и распределение пробиотика</li>
 			<li>Барда сухая (послеспиртовая) - Источник остаточных сахаров и витаминов группы B</li>
 			<li>Жом свекловичный - Источник пектина и легкоферментируемой клетчатки; обеспечивает буферность рубцовой среды</li>
 			<li>Жмых подсолнечника - Источник сырого протеина (15-18%) и серусодержащих аминокислот</li>
 			<li>Костра льна -  Структурирующий агент; предотвращает слёживание; связывает свободную влагу</li>
-			<li>Пробиотик Propionibacterium freudenreichii - Стабилизация pH (4,8-5,2); подавление патогенной микрофлоры; продукция пропионовой кислоты и витамина B₁₂</li>
-		</ul>
+			<li>Пробиотик Propionibacterium freudenreichii - Стабилизация pH (4,8-5,2); подавление патогенной микрофлоры; продукция пропионовой кислоты и витамина B<msup>₁₂</msup></li>
+		</ul> -->
+		<h3 class='custom-underline'>СОСТАВ И ФУНКЦИЯ КОМПОНЕНТОВ</h3>
+		<div class="wrapper">
+			<div class="box">
+				<div class="icon"><img src="img/drop_2.svg" alt=""></div>
+				<div class="title"><h3>Барда жидкая (послеспиртовая)</h3></div>
+				<div class="text">Обеспечивает оптимальную влажность (62-65%) и распределение пробиотика</div>
+			</div>
+			<div class="box">
+				<div class="icon"><img src="img/drop.svg" alt=""></div>
+				<div class="title"><h3>Барда сухая (послеспиртовая)</h3></div>
+				<div class="text">Источник остаточных сахаров и витаминов группы B</div>
+			</div>
+			<div class="box">
+				<div class="icon"></div>
+				<div class="title"><h3>Жом свекловичный</h3></div>
+				<div class="text">Источник пектина и легкоферментируемой клетчатки; обеспечивает буферность рубцовой среды</div>
+			</div>
+			<div class="box">
+				<div class="icon"></div>
+				<div class="title"><H3>Жмых подсолнечника</H3></div>
+				<div class="text">Источник сырого протеина (15-18%) и серусодержащих аминокислот</div>
+			</div>
+			<div class="box">
+				<div class="icon"></div>
+				<div class="title"><h3>Костра льна</h3></div>
+				<div class="text">Структурирующий агент; предотвращает слёживание; связывает свободную влагу</div>
+			</div>
+			<div class="box">
+				<div class="icon"></div>
+				<div class="title"><h3>Пробиотик Propionibacterium freudenreichii</h3></div>
+				<div class="text">Стабилизация pH (4,8-5,2); подавление патогенной микрофлоры; продукция пропионовой кислоты и витамина B<msup>₁₂</msup></div>
+			</div>
+		</div>
 	</div>
  	<div class="container type-e">
-		<h3>АНАЛИЗ ПИТАТЕЛЬНОЙ ЦЕННОСТИ ГОТОРОЙ ФОРМЫ КОМБИКОРМА</h3>
+		<h3 class='custom-underline'>АНАЛИЗ ПИТАТЕЛЬНОЙ ЦЕННОСТИ ГОТОРОЙ ФОРМЫ КОМБИКОРМА</h3>
 		<table>
         <thead>
             <tr>
@@ -150,22 +211,22 @@
             <tr>
                 <td>Массовая доля влаги</td>
                 <td>7.7%</td>
-                <td>ГОСТ Р 57059-2016<span> - Корма, комбикорма, комбикормовое сырье. Экспресс-метод определения влаги</span>, п.11</td>
+                <td><a class='gost-link' href="https://internet-law.ru/gosts/gost/62895/">ГОСТ Р 57059-2016</a><span> - Корма, комбикорма, комбикормовое сырье. Экспресс-метод определения влаги</span>, п.11</td>
             </tr>
             <tr>
                 <td>Массовая доля сырого жира</td>
                 <td>8,6±0,8%</td>
-                <td>ГОСТ 13496.15-2016<span> - Корма, комбикормовое сырье. Методы определения массовой доли сырого жира</span>, п.9.1</td>
+                <td><a class='gost-link' href="https://internet-law.ru/gosts/gost/63036/">ГОСТ 13496.15-2016</a><span> - Корма, комбикормовое сырье. Методы определения массовой доли сырого жира</span>, п.9.1</td>
             </tr>
             <tr>
                 <td>Массовая доля сырого протеина</td>
                 <td>15,0±0,5%</td>
-                <td>ГОСТ 13496.4-2019<span> - Корма, комбикормовое сырье. Методы определения содержания азота и сырого протеина</span>, п.8</td>
+                <td><a class='gost-link' href="https://internet-law.ru/gosts/gost/71526/">ГОСТ 13496.4-2019</a><span> - Корма, комбикормовое сырье. Методы определения содержания азота и сырого протеина</span>, п.8</td>
             </tr>
             <tr>
                 <td>Массовая доля сырой клетчатки</td>
                 <td>2,9±1,0%</td>
-                <td>ГОСТ 31675-2012<span> - Корма. Методы определения содержания сырой клетчатки с применением промежуточной фильтрации</span>, п.6</td>
+                <td><a class='gost-link' href="https://meganorm.ru/Data/527/52702.pdf">ГОСТ 31675-2012</a><span> - Корма. Методы определения содержания сырой клетчатки с применением промежуточной фильтрации</span>, п.6</td>
             </tr>
             <tr>
                 <td>Содержание обменной энергии</td>
@@ -185,16 +246,20 @@
 			<li>Email: gaffarova2002@list.ru</li>
 			<li>www.barkors.ru</li>
 		</ul>
-		<div class="box">
-			<h3>НАШИ ПАРТНЕРЫ</h3>
-			<div class="flex">
-				<div class='wrapper'><img src="img/bashspirt.png" alt=""></div>
-				<div class="wrapper"><img src="img/FASIE.SVG" alt=""></div>
-				<div class="wrapper"><img src="img/uunit.svg" alt=""></div>
-			</div>
-		</div>
 	</div>
 </footer>
 <script src='script.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Находит все ссылки на странице и добавляет им target="_blank"
+    document.querySelectorAll('a').forEach(link => {
+      // Игнорируем якори (ссылки-крутилки внутри страницы, например #contact)
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer'); // Рекомендуется для безопасности
+      }
+    });
+  });
+</script>
 </body>
 </html>

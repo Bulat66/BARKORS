@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Эллипс_1" data-name="Эллипс 1" class="cls-1" d="M24,8"/>
+  <path id="Эллипс_2" data-name="Эллипс 2" class="cls-1" d="M24,7c2.149-.018,13,14.716,13,23S31.18,45,24,45,11,38.284,11,30,21.957,7.017,24,7Z"/>
+</svg>
