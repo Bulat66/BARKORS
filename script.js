@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     Promise.all([
-        loadModel('unit.glb'),
-        loadModel('unit_2.glb')
+        loadModel('3d/unit.glb'),
+        loadModel('3d/unit_2.glb')
     ]).then(([gltf1, gltf2]) => {
         // Передняя пачка
         const modelFront = gltf1.scene;
