@@ -17,11 +17,6 @@
   font-weight: <weight>;
   font-style: normal;
 }
-.pt-mono-regular {
-  font-family: "PT Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
 .roboto-<uniquifier> {
   font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
@@ -30,15 +25,19 @@
   font-variation-settings:
     "wdth" 100;
 }
+.italic{
+	font-style: italic;
+}
 *,*:before,*:after{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	/*border: 1px red dashed;*/
 }
 .container{
 	width: 100%;
 	max-width: 1200px;
-	margin: 50px auto;
+	margin: 20px auto;
 }
 .container:last-child{
 	margin-bottom: 0;
@@ -55,16 +54,16 @@ h3{
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  font-variation-settings:"wdth" 100;
+  line-height: 1.8rem;
   }
 p{
 	font-size: 1rem;
+	max-width: 440px;
 }
 ul{
 	list-style-type: none;
 }
 a, p, table, ul, .text{
-	max-width: 650px;
 	font-family: "Golos Text", sans-serif;
   	font-optical-sizing: auto;
   	font-weight: 500;
@@ -72,41 +71,81 @@ a, p, table, ul, .text{
   	color: #f4e999;
 }
 .custom-underline{
-	margin-bottom: 50px;
+	margin-bottom: 15px;
 	text-decoration: underline;
   text-decoration-color: #b49559;
   text-decoration-thickness: 4px;
-  text-underline-offset: 8px;
+  text-underline-offset: 2px;
   filter: drop-shadow(0px 4px 8px #b49559);
 }
 header{
 	width: 100%;
-	border-bottom: 2px solid #f4e999;v
+	border-bottom: 2px solid rgba(244, 233, 153, 0.5);
+	box-shadow: 0 5px 3px 2px rgba(244, 233, 153, 0.7);
+	position: relative;
 }
-header .container{
+header::after{
+ content: '';
+      position: absolute;
+      
+      /* Позиционируем элемент точно на место нижней сплошной тени */
+      bottom: -15px; 
+      left: 0;
+      width: 100%;
+      height: 15px; /* Высота равна толщине тени */
+      
+      /* Создаем сам лучик с помощью градиента */
+      background: linear-gradient(
+        90deg, 
+        transparent 0%, 
+        rgba(244, 233, 153, 0) 30%, 
+        rgba(244, 233, 153, 0.8) 50%, /* Яркий центр луча */
+        rgba(244, 233, 153, 0) 70%, 
+        transparent 100%
+      );
+      
+      /* Растягиваем фон, чтобы скрыть луч за пределами видимости */
+      background-size: 200% 100%;
+      background-position: 150% 100%;
+      
+      /* Подключаем бесконечную анимацию */
+      animation: run-ray 4s ease-in-out infinite;
+    }
+
+    /* 3. Описание анимации движения луча */
+    @keyframes run-ray {
+      0% {
+        background-position: 150% 100%; /* Луч спрятан справа */
+      }
+      30%, 100% {
+        background-position: -50% 100%; /* Луч пробегает налево и замирает (пауза) */
+      }
+    }
+header .container .flex{
 	display: flex;
-	align-items: center;
 	gap: 50px;
+	align-items: center;
+	padding: 10px;
 }
 header .container .logo-box{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	max-width: 310px;
 }
 header .container .logo-box img{
 	width: 250px;
 }
 header .container .logo-box h3{
 	font-size: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
 }
 header .container .text-box{
 	max-width: 400px;
 	min-width: 240px;
 	font-style: italic;
-}
-header .flex{
-	flex-wrap: wrap;
 }
 .bc-img{
 	background-size: cover;
@@ -115,54 +154,61 @@ header .flex{
 }
 .type-a{
 	position: relative;
-  width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  gap: 20px;
+}
+.type-a ul li{
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+}
+.type-a .left-wrapper{
+	padding: 15px;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	color: black;
+	background-image: linear-gradient(to right, #b4843d, #c49d52, #d4b668, #e4cf80, #f4e999);
+}
+.type-a .left-wrapper .coin{
+	max-width: 200px;
+	min-width: 100px;
+	width: 45%;
+	aspect-ratio: 1;
+	border-radius: 30px;
+	box-shadow: 
+    inset 0 4px 10px -2px #ffd271,
+    inset 0 -4px 10px -2px #caa75a;
+    background: black;
+    background-image: url('img/a.svg');
+    background-size: cover;
+    background-position: center;
+}
+.type-a .left-wrapper p{
+	min-width: 240px;
+	max-width: 440px;
+	color: black;
 }
 .type-a .wrapper{
-	margin-top: 30px;
-	width: 100%;
-	max-width: 100px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 2rem;
-	border-radius: 30px;
-}
-.type-a .box{
-	width: 320px;
+	max-width: 440px;
 	min-width: 240px;
-  padding: 30px;
-  border-radius: 16px; /* Закругленные углы смотрятся лучше всего */
-  font-family: sans-serif;
-
-  /* 1. Размытие того, что находится ЗА блоком */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px); /* Для поддержки Safari */
-
-  /* 2. Полупрозрачный белый фон (15-25% бел.) */
-  background: rgba(255, 255, 255, 0.15);
-
-  /* 3. Тонкая светлая рамка создает эффект объема и грани стекла */
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  /* 4. Мягкая тень под блоком для отделения от фона */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
-.type-a  .left{
-	width: 320px;
-	padding: 20px;
-	margin: 20px;
-	border-radius: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.type-a .wrapper p{
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
 }
-.type-a .right{
-	width: 280px;
+.hoof{
+	display: inline-block;
+	height: 1.8rem;
+	aspect-ratio: 1;
+	background-image: url('img/hoof.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .type-b{
 	height: auto;
@@ -172,16 +218,16 @@ header .flex{
 	justify-content: center;
 }
 .type-b .left-box{
-    width: 50%;
-    min-width: 300px;
-    height: 500px;
-    position: relative;
+   width: 50%;
+   min-width: 300px;
+   height: 500px;
+   position: relative;
 }
 #three-canvas {
-    width: 100%;
-    height: 100%;
-    display: block;
-    outline: none;
+   width: 100%;
+   height: 100%;
+   display: block;
+   outline: none;
 }
 .type-b .right-box{
 	width: 300px;
@@ -192,14 +238,18 @@ header .flex{
 .type-b .right-box .slide{
 	width: 100%;
 	max-width: 320px;
-	height: 380px;
-	border-radius: 30px;
-	padding: 1.5rem;
+	border-radius: 15px;
+	padding: 15px;
 	position: absolute;
-	background-image: linear-gradient(to bottom, #414141, #323232, #232323, #161616, #010101);
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	background: -webkit-linear-gradient(150deg, #ffd271,#caa75a);
+	background: linear-gradient(150deg, #ffd271,#caa75a);
+	transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+	box-shadow: 0 6px 8px 6px black;
 	cursor: pointer;
 	user-select: none;
+}
+.type-b .right-box .slide li{
+	color: black;
 }
 .type-c{
 	width: 100%;
@@ -240,7 +290,7 @@ header .flex{
 .team .wrapper{
 }
 .hero{
-	padding: 20px;
+	padding: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -266,7 +316,7 @@ header .flex{
 .partners h3{
 	text-align: center;
 	weight: 700;
-	margin: 50px;
+	margin-bottom: 35px;
 }
 .partners .flex{
 	display: flex;
@@ -277,7 +327,7 @@ header .flex{
 	align-items: stretch;
 }
 .organisation{
-	padding: 20px;
+	padding: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -401,10 +451,38 @@ header .flex{
 	color: black;
 }
 .type-e{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
 	padding: 10px;
 }
+.type-e .wrapper{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+}
 .type-e h3{
+	width: 100%;
 	text-align: center;
+}
+.type-e .wrapper .box{
+	max-width: 400px;
+}
+.type-e .wrapper .box img{
+	width: 100%;
+	border-radius: 20px;
+}
+.type-e .wrapper .box .description{
+	padding: 10px;
+	font-family: "Golos Text", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #f4e999;
 }
 .type-e table{
 	margin: 0 auto;
@@ -487,10 +565,17 @@ footer .container .box .flex .wrapper img{
 	.team .hero .bc-img{
 		width: 8rem;
 	}
+	.type-e .wrapper{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
 }
 @media (max-width: 1024px){
 	.container{
-				width: 100%;
+		width: 100%;
 		max-width: 824px;
 	}
 	header .container .logo-box img{
@@ -502,7 +587,7 @@ footer .container .box .flex .wrapper img{
 header .container .text-box{
 	max-width: none;
 	width: 300px;
-	font-size: .8rem;
+	font-size: 1rem;
 }
 	.type-c .box img{
 		width: 6rem;
@@ -542,11 +627,14 @@ header .container .text-box{
 @media (max-width: 768px){
 	.container{
 		width: 100%;
-		max-width: 608px;
+		max-width: 698px;
 	}
 	table, ul, .text{
-		max-width: 300px;
+		/*max-width: 300px;*/
 		font-size: 1rem;
+	}
+	.type-a{
+		flex-wrap: wrap;
 	}
 	.type-a .wrapper{
 		gap: 1rem;
@@ -580,7 +668,11 @@ header .container .text-box{
 	.hero{
 		flex-wrap: wrap;
 	}
-	footer .container .box .flex{
+	.type-e .granules img{
+		max-width: 250px;
+	}
+	footer .container 
+	.box .flex{
 		flex-wrap: wrap;
 	}
 	footer .container .box .flex .wrapper img{
@@ -602,13 +694,11 @@ header .container .text-box{
 	.container{
 		margin: 30px auto;
 	}
-	header .container{
+	header .container .flex{
 		gap: 10px;
-		flex-direction: column;
-		padding-bottom: 20px;
 	}
-	.type-a .box{
-		width: 240px;
+	.type-a .left-wrapper{
+		flex-wrap: wrap;
 	}
 	.type-b{
 		height: auto;	
@@ -633,14 +723,14 @@ header .container .text-box{
 	
 }
 @media (max-width: 480px){
-/*	h3, p{
-		font-size: .9rem;
-	}*/
 	ul{
 		font-size: .9rem;
 	}
 	.container{
 		max-width: 320px;
+	}
+	header .container .flex{
+		flex-direction: column;
 	}
 	.type-a{
 		flex-direction: column;
@@ -656,8 +746,15 @@ header .container .text-box{
 	.type-c .box img{
 		width: 4rem;
 	}
+	.custom-underline{
+		margin-bottom: 8px;
+	}
 }
 @media (max-width: 320px){
+	p, h3{
+		max-width: 300px;
+		min-width: 240px;
+	}
 	table{
 		font-size: .6rem;
 	}
@@ -667,18 +764,12 @@ header .container .text-box{
 	header .container .logo-box img{
 		width: 100px;
 	}
-/*	header .container .logo-box h3{
-		font-size: 1.5rem;
-	}*/
-	header .container .text-box{
-		max-width: 280px;
-	}
-	footer .container .box .flex .wrapper img{
-		width: 150px;
-	}
 	header .container .text-box{
 		max-width: 200px;
 		font-size: .8rem;
+	}
+	footer .container .box .flex .wrapper img{
+		width: 150px;
 	}
 	.type-a .box{
 		width: 280px;
